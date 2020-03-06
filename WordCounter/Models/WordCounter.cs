@@ -18,26 +18,10 @@ namespace WordCounter.Models
     }
 
     // Need check for comma or period method
-    public void SymbolRemover()
+    public void WordSymbolRemover()
     {
-      string[] splitSentence = Sentence.Split(" ");
       string[] splitWord = Word.Split("");
       string newWord = Word;
-      string newSentence = Sentence;
-      for (int i = 0; i < Sentence.Length; i++)
-      {
-        Console.WriteLine($"newSentence i: {newSentence[i]}");
-        if (splitSentence[i] == ",")
-        {
-          newSentence.Remove(i);
-          Sentence = newSentence;
-        }
-        else if (splitSentence[i] == ".")
-        {
-          newSentence.Remove(i);
-          Sentence = newSentence;
-        }
-      }
       for (int i = 0; i < splitWord.Length; i++)
       {
         Console.WriteLine($"newWord i: {newWord[i]}");
@@ -52,8 +36,28 @@ namespace WordCounter.Models
           Word = newWord;
         }
       }
-      Console.WriteLine($"newSentence: {newSentence}");
       Console.WriteLine($"newWord: {newWord}");
+    }
+
+    public void SentenceSymbolRemover()
+    {
+      string[] splitSentence = Sentence.Split("");
+      string newSentence = Sentence;
+      for (int i = 0; i < splitSentence.Length; i++)
+      {
+        Console.WriteLine($"newSentence i: {newSentence[i]}");
+        if (splitSentence[i] == ",")
+        {
+          newSentence.Remove(i);
+          Sentence = newSentence;
+        }
+        else if (splitSentence[i] == ".")
+        {
+          newSentence.Remove(i);
+          Sentence = newSentence;
+        }
+      }
+      Console.WriteLine($"newSentence: {newSentence}");
     }
 
     public void SetWordAndSentence(string word, string sentence)
