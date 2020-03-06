@@ -19,6 +19,6 @@ class Program
     Console.WriteLine($"Word: {userWord}, Sentence: {userSentence}.");
     myRepeatCounter.SetWordAndSentence(userWord, userSentence);
     myRepeatCounter.FindMatch();
-    Console.WriteLine(myRepeatCounter.Count);
+    Console.WriteLine($"Your Word: {myRepeatCounter.Word}, Matched {myRepeatCounter.Count} Time(s) in Your Sentence.");
   }
 }
