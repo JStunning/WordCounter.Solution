@@ -5,10 +5,10 @@ using WordCounter.Models;
 class Program
 {
 
-  public static Counter myCounter;
+  public static RepeatCounter myRepeatCounter;
 
   static void Main()
   {
-    myCounter = new Counter();
+    myRepeatCounter = new RepeatCounter();
   }
 }

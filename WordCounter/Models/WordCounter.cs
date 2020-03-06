@@ -3,14 +3,14 @@ using System.Collections.Generic;
 
 namespace WordCounter.Models
 {
-  public class Counter
+  public class RepeatCounter
   {
-    
+
     public int Count { get; set; }
     public string Word { get; set; }
     public string Sentence { get; set; }
 
-    public Counter()
+    public RepeatCounter()
     {
       Count = 0;
       Word = "";
@@ -19,12 +19,29 @@ namespace WordCounter.Models
 
     public void SetWord(string word)
     {
-      Word = word;
+      Word = word.ToLower();
     }
 
     public void SetSentence(string sentence)
     {
-      Sentence = sentence;
+      Sentence = sentence.ToLower();
+    }
+
+    public void FindMatch()
+    {
+      string[] splitSentence = Sentence.Split(" ");
+      for(int i = 0; i < splitSentence.Length; i++)
+      {
+        if(splitSentence[i] == Word)
+        {
+          IncrementCount();
+        }
+      }
+    }
+
+    public void IncrementCount()
+    {
+      Count++;
     }
 
   }
