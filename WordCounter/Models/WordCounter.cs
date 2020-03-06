@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace WordCounter.Models
@@ -20,23 +21,24 @@ namespace WordCounter.Models
     // Need check for comma or period method
     public void WordSymbolRemover()
     {
-      string[] splitWord = Word.Split("");
       string newWord = Word;
-      for (int i = 0; i < splitWord.Length; i++)
+      char comma = char.Parse(",");
+      char period = char.Parse(".");
+      int removeIndex = 0;
+      for (int i = 0; i < newWord.Length; i++)
       {
-        Console.WriteLine($"newWord i: {newWord[i]}");
-        if (splitWord[i] == ",")
-        {
-          newWord.Remove(i);
-          Word = newWord;
+        Console.WriteLine("newWord i " + newWord[i]);
+        if (newWord[i] == comma){
+          removeIndex = i;
         }
-        else if (splitWord[i] == ".")
-        {
-          newWord.Remove(i);
-          Word = newWord;
+        else if (newWord[i] == period){
+          removeIndex = i;
         }
       }
-      Console.WriteLine($"newWord: {newWord}");
+      Console.WriteLine($"newWord: {newWord.Remove(removeIndex)}");
+      Console.WriteLine($"Word: {Word}");
+      Word = newWord.Remove(removeIndex);
+      Console.WriteLine("word after" + Word);
     }
 
     public void SentenceSymbolRemover()

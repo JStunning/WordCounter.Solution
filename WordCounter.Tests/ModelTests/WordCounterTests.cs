@@ -89,13 +89,27 @@ namespace WordCounter.Tests
     }
 
     [TestMethod]
-    public void RepeatCounter_SymbolRemover_Hello()
+    public void RepeatCounter_WordSymbolRemoverComma_Hello()
     {
       // Arrange
       RepeatCounter newRepeatCounter = new RepeatCounter();
       // Act
       newRepeatCounter.SetWordAndSentence("Hello,", "Hello World");
-      newRepeatCounter.SymbolRemover();
+      newRepeatCounter.WordSymbolRemover();
+      newRepeatCounter.FindMatch();
+      int result = newRepeatCounter.Count;
+      // Assert
+      Assert.AreEqual(result, 1);
+    }
+
+    [TestMethod]
+    public void RepeatCounter_WordSymbolRemoverPeriod_Hello()
+    {
+      // Arrange
+      RepeatCounter newRepeatCounter = new RepeatCounter();
+      // Act
+      newRepeatCounter.SetWordAndSentence("Hello.", "Hello World");
+      newRepeatCounter.WordSymbolRemover();
       newRepeatCounter.FindMatch();
       int result = newRepeatCounter.Count;
       // Assert
