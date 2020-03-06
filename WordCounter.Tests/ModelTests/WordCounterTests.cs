@@ -115,5 +115,33 @@ namespace WordCounter.Tests
       // Assert
       Assert.AreEqual(result, 1);
     }
+
+    [TestMethod]
+    public void RepeatCounter_SentenceSymbolRemoverComma_HelloWorld()
+    {
+      // Arrange
+      RepeatCounter newRepeatCounter = new RepeatCounter();
+      // Act
+      newRepeatCounter.SetWordAndSentence("World", "Hello World,");
+      newRepeatCounter.SentenceSymbolRemover();
+      newRepeatCounter.FindMatch();
+      int result = newRepeatCounter.Count;
+      // Assert
+      Assert.AreEqual(result, 1);
+    }
+
+    [TestMethod]
+    public void RepeatCounter_SentenceSymbolRemoverPeriod_HelloWorld()
+    {
+      // Arrange
+      RepeatCounter newRepeatCounter = new RepeatCounter();
+      // Act
+      newRepeatCounter.SetWordAndSentence("World", "Hello World.");
+      newRepeatCounter.SentenceSymbolRemover();
+      newRepeatCounter.FindMatch();
+      int result = newRepeatCounter.Count;
+      // Assert
+      Assert.AreEqual(result, 1);
+    }
   }
 }
