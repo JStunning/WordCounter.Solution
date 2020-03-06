@@ -5,9 +5,10 @@ using WordCounter.Models;
 class Program
 {
 
-  public static Game myGame;
+  public static Counter myCounter;
 
   static void Main()
   {
+    myCounter = new Counter();
   }
 }
