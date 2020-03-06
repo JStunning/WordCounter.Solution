@@ -87,5 +87,19 @@ namespace WordCounter.Tests
       // Assert
       Assert.AreEqual(result, 3);
     }
+
+    [TestMethod]
+    public void RepeatCounter_SymbolRemover_Hello()
+    {
+      // Arrange
+      RepeatCounter newRepeatCounter = new RepeatCounter();
+      // Act
+      newRepeatCounter.SetWordAndSentence("Hello,", "Hello World");
+      newRepeatCounter.SymbolRemover();
+      newRepeatCounter.FindMatch();
+      int result = newRepeatCounter.Count;
+      // Assert
+      Assert.AreEqual(result, 1);
+    }
   }
 }
