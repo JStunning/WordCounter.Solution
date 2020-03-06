@@ -16,6 +16,7 @@ class Program
     string userWord = Console.ReadLine();
     Console.WriteLine("Enter a sentence.");
     string userSentence = Console.ReadLine();
-    Console.WriteLine(userWord + " " + userSentence);
+    Console.WriteLine($"Word: {userWord}, Sentence: {userSentence}.");
+
   }
 }

@@ -23,27 +23,17 @@ namespace WordCounter.Tests
     }
 
     [TestMethod]
-    public void RepeatCounter_SetWord_Hello()
+    public void RepeatCounter_SetWordAndSentence_HelloHelloWorld()
     {
       // Arrange
       RepeatCounter newRepeatCounter = new RepeatCounter();
       // Act
-      newRepeatCounter.SetWord("Hello");
-      string result = newRepeatCounter.Word;
+      newRepeatCounter.SetWordAndSentence("Hello", "Hello World");
+      string resultWord = newRepeatCounter.Word;
+      string resultSentence = newRepeatCounter.Sentence;
       // Assert
-      Assert.AreEqual(result, "hello");
-    }
-
-    [TestMethod]
-    public void RepeatCounter_SetSentence_HelloWorld()
-    {
-      // Arrange
-      RepeatCounter newRepeatCounter = new RepeatCounter();
-      // Act
-      newRepeatCounter.SetSentence("Hello World");
-      string result = newRepeatCounter.Sentence;
-      // Assert
-      Assert.AreEqual(result, "hello world");
+      Assert.AreEqual(resultWord, "hello");
+      Assert.AreEqual(resultSentence, "hello world");
     }
 
     [TestMethod]
@@ -64,8 +54,7 @@ namespace WordCounter.Tests
       // Arrange
       RepeatCounter newRepeatCounter = new RepeatCounter();
       // Act
-      newRepeatCounter.SetWord("Hello");
-      newRepeatCounter.SetSentence("Hello World");
+      newRepeatCounter.SetWordAndSentence("Hello", "Hello World");
       newRepeatCounter.FindMatch();
       int result = newRepeatCounter.Count;
       // Assert
@@ -78,8 +67,7 @@ namespace WordCounter.Tests
       // Arrange
       RepeatCounter newRepeatCounter = new RepeatCounter();
       // Act
-      newRepeatCounter.SetWord("Hello");
-      newRepeatCounter.SetSentence("Hello Hello Hello Helloooo, World");
+      newRepeatCounter.SetWordAndSentence("Hello", "Hello Hello Hello Helloooo, World");
       newRepeatCounter.FindMatch();
       int result = newRepeatCounter.Count;
       // Assert

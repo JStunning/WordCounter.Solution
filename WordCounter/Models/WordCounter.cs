@@ -17,13 +17,9 @@ namespace WordCounter.Models
       Sentence = "";
     }
 
-    public void SetWord(string word)
+    public void SetWordAndSentence(string word, string sentence)
     {
       Word = word.ToLower();
-    }
-
-    public void SetSentence(string sentence)
-    {
       Sentence = sentence.ToLower();
     }
 
