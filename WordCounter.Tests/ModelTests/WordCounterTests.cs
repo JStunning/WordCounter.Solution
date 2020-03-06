@@ -37,6 +37,20 @@ namespace WordCounter.Tests
     }
 
     [TestMethod]
+    public void RepeatCounter_SetWordAndSentence_NonLetterChars()
+    {
+      // Arrange
+      RepeatCounter newRepeatCounter = new RepeatCounter();
+      // Act
+      newRepeatCounter.SetWordAndSentence("!@#$", "!@#$ %^&*");
+      string resultWord = newRepeatCounter.Word;
+      string resultSentence = newRepeatCounter.Sentence;
+      // Assert
+      Assert.AreEqual(resultWord, "!@#$");
+      Assert.AreEqual(resultSentence, "!@#$ %^&*");
+    }
+
+    [TestMethod]
     public void RepeatCounter_IncrementCount_1()
     {
       // Arrange

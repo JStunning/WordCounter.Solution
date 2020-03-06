@@ -17,6 +17,8 @@ namespace WordCounter.Models
       Sentence = "";
     }
 
+    // Need check for comma or period method
+
     public void SetWordAndSentence(string word, string sentence)
     {
       Word = word.ToLower();
