@@ -19,6 +19,12 @@ namespace WordCounter.Models
     }
 
     // Need check for comma or period method
+    public void AllSymbolRemover()
+    {
+      WordSymbolRemover();
+      SentenceSymbolRemover();
+    }
+
     public void WordSymbolRemover()
     {
       string newWord = Word;
@@ -27,7 +33,6 @@ namespace WordCounter.Models
       int removeIndex = 0;
       for (int i = 0; i < newWord.Length; i++)
       {
-        Console.WriteLine("newWord i " + newWord[i]);
         if (newWord[i] == comma){
           removeIndex = i;
         }
@@ -35,31 +40,28 @@ namespace WordCounter.Models
           removeIndex = i;
         }
       }
-      Console.WriteLine($"newWord: {newWord.Remove(removeIndex)}");
-      Console.WriteLine($"Word: {Word}");
       Word = newWord.Remove(removeIndex);
-      Console.WriteLine("word after" + Word);
     }
 
     public void SentenceSymbolRemover()
     {
-      string[] splitSentence = Sentence.Split("");
       string newSentence = Sentence;
-      for (int i = 0; i < splitSentence.Length; i++)
+      char comma = char.Parse(",");
+      char period = char.Parse(".");
+      int removeIndex = 0;
+      for (int i = 0; i < newSentence.Length; i++)
       {
-        Console.WriteLine($"newSentence i: {newSentence[i]}");
-        if (splitSentence[i] == ",")
-        {
-          newSentence.Remove(i);
-          Sentence = newSentence;
+        Console.WriteLine("newSentence i " + newSentence[i]);
+        if (newSentence[i] == comma){
+          removeIndex = i;
         }
-        else if (splitSentence[i] == ".")
-        {
-          newSentence.Remove(i);
-          Sentence = newSentence;
+        else if (newSentence[i] == period){
+          removeIndex = i;
         }
       }
-      Console.WriteLine($"newSentence: {newSentence}");
+      Console.WriteLine($"newSentence: {newSentence.Remove(removeIndex)}");
+      Console.WriteLine($"Sentence: {Sentence}");
+      Sentence = newSentence.Remove(removeIndex);
     }
 
     public void SetWordAndSentence(string word, string sentence)
