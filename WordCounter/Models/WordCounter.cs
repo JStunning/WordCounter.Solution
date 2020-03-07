@@ -40,7 +40,15 @@ namespace WordCounter.Models
           removeIndex = i;
         }
       }
-      Word = newWord.Remove(removeIndex);
+      if (removeIndex > 0)
+      {
+        Word = newWord.Remove(removeIndex);
+      }
+      else 
+      {
+        Word = newWord;
+      }
+      
     }
 
     public void SentenceSymbolRemover()
