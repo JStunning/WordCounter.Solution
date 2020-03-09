@@ -67,9 +67,17 @@ namespace WordCounter.Models
           removeIndex = i;
         }
       }
-      Console.WriteLine($"newSentence: {newSentence.Remove(removeIndex)}");
-      Console.WriteLine($"Sentence: {Sentence}");
-      Sentence = newSentence.Remove(removeIndex);
+      if (removeIndex > 0)
+      {
+        Sentence = newSentence.Remove(removeIndex);
+      }
+      else 
+      {
+        Sentence = newSentence;
+      }
+      // Console.WriteLine($"newSentence: {newSentence.Remove(removeIndex)}");
+      // Console.WriteLine($"Sentence: {Sentence}");
+      // Sentence = newSentence.Remove(removeIndex);
     }
 
     public void SetWordAndSentence(string word, string sentence)

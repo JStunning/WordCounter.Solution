@@ -9,3 +9,16 @@ C:\Users\Stunning\Desktop\epicodusProjects\c#\Word-Counter.Solution\WordCounter\
 C:\Users\Stunning\Desktop\epicodusProjects\c#\Word-Counter.Solution\WordCounter\obj\Debug\netcoreapp2.2\WordCounter.AssemblyInfo.cs
 C:\Users\Stunning\Desktop\epicodusProjects\c#\Word-Counter.Solution\WordCounter\obj\Debug\netcoreapp2.2\WordCounter.dll
 C:\Users\Stunning\Desktop\epicodusProjects\c#\Word-Counter.Solution\WordCounter\obj\Debug\netcoreapp2.2\WordCounter.pdb
+C:\Users\Stunning\Desktop\epicodusProjects\c#\Word-Counter.Solution\WordCounter\obj\Debug\netcoreapp2.2\WordCounter.RazorAssemblyInfo.cache
+C:\Users\Stunning\Desktop\epicodusProjects\c#\Word-Counter.Solution\WordCounter\obj\Debug\netcoreapp2.2\WordCounter.RazorAssemblyInfo.cs
+C:\Users\Stunning\Desktop\epicodusProjects\c#\Word-Counter.Solution\WordCounter\bin\Debug\netcoreapp2.2\WordCounter.Views.dll
+C:\Users\Stunning\Desktop\epicodusProjects\c#\Word-Counter.Solution\WordCounter\bin\Debug\netcoreapp2.2\WordCounter.Views.pdb
+C:\Users\Stunning\Desktop\epicodusProjects\c#\Word-Counter.Solution\WordCounter\obj\Debug\netcoreapp2.2\WordCounter.TagHelpers.input.cache
+C:\Users\Stunning\Desktop\epicodusProjects\c#\Word-Counter.Solution\WordCounter\obj\Debug\netcoreapp2.2\WordCounter.TagHelpers.output.cache
+C:\Users\Stunning\Desktop\epicodusProjects\c#\Word-Counter.Solution\WordCounter\obj\Debug\netcoreapp2.2\WordCounter.RazorCoreGenerate.cache
+C:\Users\Stunning\Desktop\epicodusProjects\c#\Word-Counter.Solution\WordCounter\obj\Debug\netcoreapp2.2\Razor\Views\Home\Result.g.cshtml.cs
+C:\Users\Stunning\Desktop\epicodusProjects\c#\Word-Counter.Solution\WordCounter\obj\Debug\netcoreapp2.2\WordCounter.RazorTargetAssemblyInfo.cache
+C:\Users\Stunning\Desktop\epicodusProjects\c#\Word-Counter.Solution\WordCounter\obj\Debug\netcoreapp2.2\WordCounter.RazorTargetAssemblyInfo.cs
+C:\Users\Stunning\Desktop\epicodusProjects\c#\Word-Counter.Solution\WordCounter\obj\Debug\netcoreapp2.2\WordCounter.Views.pdb
+C:\Users\Stunning\Desktop\epicodusProjects\c#\Word-Counter.Solution\WordCounter\obj\Debug\netcoreapp2.2\WordCounter.csproj.CopyComplete
+C:\Users\Stunning\Desktop\epicodusProjects\c#\Word-Counter.Solution\WordCounter\obj\Debug\netcoreapp2.2\Razor\Views\Home\WordCounter.g.cshtml.cs
