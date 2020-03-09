@@ -75,9 +75,6 @@ namespace WordCounter.Models
       {
         Sentence = newSentence;
       }
-      // Console.WriteLine($"newSentence: {newSentence.Remove(removeIndex)}");
-      // Console.WriteLine($"Sentence: {Sentence}");
-      // Sentence = newSentence.Remove(removeIndex);
     }
 
     public void SetWordAndSentence(string word, string sentence)
